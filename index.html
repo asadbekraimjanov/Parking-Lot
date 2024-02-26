@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <div class="row main-row">
+    <nav class="col-2 first-col">
+      <div class="container nav-brand">
+        <p class="company-name">Parking Lot</p>
+      </div>
+      <div class="container main-navbar">
+        <ul class="navbar-items">
+          <li class="active"><a href="#dashboard"><i class="fa-solid fa-chart-pie"></i> &nbsp;Dashboard</a></li>
+          <li><a href="#leaderboard"><span class="mdi mdi-poll"></span> &nbsp;Leaderboard</a></li>
+          <li><a href="#order"><span class="mdi mdi-cart-outline"></span> &nbsp;order</a></li>
+          <li><a href="#Product"><span class="mdi mdi-shopping-outline"></span> &nbsp;Products</a></li>
+          <li><a href="#SalesReport"><span class="mdi mdi-chart-line"></span> &nbsp;Sales Report</a></li>
+          <li><a href="#Messages"><span class="mdi mdi-message-processing-outline"></span> &nbsp;Messages</a></li>
+          <li><a href="#Settings"><i class="fa-solid fa-gear"></i> &nbsp;Settings</a></li>
+          <li><a href="#LogOut"><span class="mdi mdi-logout"></span> &nbsp;Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="col-10 second-col">
+      <header>
+        <div class="d-flex container-fluid main-header">
+          <button class="btn btn-light navbar-toggler d-flex gap-2 align-items-center" type="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          <a class="navbar-brand fw-bold" href="./index.html">Dashboard</a>
+            <div class="dropdown-lan">
+          </div>
+          <form class="d-flex w-25 search-form" role="search">
+            <label class="search-label" for="search-input"><i class="fa fa-search"></i></label>
+            <input class="form-control me-2 rounded-4 w-full" id="search-input" type="search"
+              placeholder="Search here.." aria-label="Search" />
+          </form>
+          <div class="dropdown-lan">
+            <button class="btn btn-light dropdown-toggle d-flex gap-2 align-items-center" type="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="profile-img" src="./images/1200px-Flag_of_the_United_States.svg.webp"
+                style="width: 25px; height: 25px; border-radius: 50%;" alt="photo"/>
+              <span>Eng (US)</span>
+            </button>
+          </div>
+          <button class="btn btn-notification"><span></span><i class="fa-regular fa-bell"></i></button>
+          <div class="dropdown-user">
+            <button class="btn btn-profile btn-light dropdown-toggle d-flex gap-2 align-items-center" type="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="profile-img rounded"
+                src="https://img.freepik.com/free-photo/young-woman-with-long-straight-hair-studio-portrait-attractive-brunette-girl-fashion-model-wears-black-shirt-anf-jeans-sexy-female-model_186202-7462.jpg"
+                alt="photo">
+              <div class="d-flex flex-column user-items align-item-start">
+                <span class="profile-name">
+                  Abrashka
+                </span>
+                <small class="profile-role text-muted">
+                  admin
+                </small>
+              </div>
+            </button>
+          </div>
+      </header>
+      <section class="main-section p-3">
+        <div class="d-flex flex-wrap gap-3">
+          <div class="main-section-items">
+            <div class="row d-flex main-section-info">
+              <div class="col-9">
+                <p class="main-section-info-text">Summary</p>
+              </div>
+              <div class="col-3 d-flex align-items-center">
+                <button class="btn btn-export" id="btn-export-1"><i id="fa-download-1"
+                    class="fa-solid fa-download"></i>Export</button>
+              </div>
+            </div>
+            <div class="d-flex main-section-box">
+              <div class="sub-container" style="background-color: #fcc8cf;">
+                <div class="con-sales">
+                  <span class="mdi mdi-signal-cellular-3"></span>
+                  <p class="item-number">$1k</p>
+                  <p class="item-section">Total Sales</p>
+                </div>
+              </div>
+              <div class="sub-container" style="background-color: #ffebc3;">
+                <div class="con-orders">
+                  <span class="mdi mdi-file-chart"></span>
+                  <p class="item-number">300</p>
+                  <p class="item-section">Total Order</p>
+                </div>
+              </div>
+              <div class="sub-container" style="background-color: #c0ffd6">
+                <div class="con-customers">
+                  <i class="fa-solid fa-tag"></i>
+                  <p class="item-number">1500</p>
+                  <p class="item-section">Total Customers</p>
+                </div>
+              </div>
+              <div class="sub-container" style="background-color: #ebd4fd;">
+                <div class="con-new-customers">
+                  <i class="fa-solid fa-user-plus"></i>
+                  <p class="item-number">8</p>
+                  <p class="item-section">New Customers</p>
+                  <p class="sub-container-sale">0.5% from yesterday</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-section-items">
+            <div class="row d-flex main-section-info">
+              <div class="col-9">
+                <p class="main-section-info-text">Today's Sales</p>
+                <p class="main-section-info-comment">Sales Summery</p>
+              </div>
+              <div class="col-3 d-flex align-items-center">
+                <button class="btn btn-export" id="btn-export-2"><i id="fa-download-2"
+                    class="fa-solid fa-download"></i>Export</button>
+              </div>
+            </div>
+            <div class="d-flex main-section-box">
+              <div class="sub-container" style="background-color: #fcc8cf;">
+                <div class="con-sales">
+                  <span class="mdi mdi-signal-cellular-3"></span>
+                  <p class="item-number">400 000</p>
+                  <p class="item-section">Basic</p>
+                  <p class="sub-container-sale">+8% from yesterday</p>
+                </div>
+              </div>
+              <div class="sub-container" style="background-color: #ffebc3;">
+                <div class="con-orders">
+                  <span class="mdi mdi-file-chart"></span>
+                  <p class="item-number">500 000</p>
+                  <p class="item-section">Standart</p>
+                  <p class="sub-container-sale">+5% from yesterday</p>
+                </div>
+              </div>
+              <div class="sub-container" style="background-color: #c0ffd6">
+                <div class="con-customers">
+                  <i class="fa-solid fa-tag"></i>
+                  <p class="item-number">250 000</p>
+                  <p class="item-section">Business</p>
+                  <p class="sub-container-sale">+1.2% from yesterday</p>
+                </div>
+              </div>
+              <div class="sub-container" style="background-color: #ebd4fd;">
+                <div class="con-new-customers">
+                  <i class="fa-solid fa-user-plus"></i>
+                  <p class="item-number">150 000</p>
+                  <p class="item-section">Premium</p>
+                  <p class="sub-container-sale">0.5% from yesterday</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
